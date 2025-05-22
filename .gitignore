@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Local development
+.env
+.env.local
+
+# Data files
+*.csv
+*.json
+*.parquet
+!ingest/logs/sample_log.jsonl
+
+# DuckDB
+*.db
+*.duckdb
+
+# MinIO data
+storage/minio/data/
+
+# Airflow
+airflow.cfg
+airflow.db
+webserver_config.py
+
+# Prometheus
+prometheus/data/
+
+# Grafana
+grafana/data/ 
