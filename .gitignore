@@ -37,6 +37,7 @@ ENV/
 
 # Logs
 *.log
+logs/
 
 # Local development
 .env
@@ -59,9 +60,22 @@ storage/minio/data/
 airflow.cfg
 airflow.db
 webserver_config.py
+pipeline_orchestration/airflow/logs/
+pipeline_orchestration/airflow/plugins/
+
+# Docker volumes and local data
+config/
+plugins/
 
 # Prometheus
 prometheus/data/
 
 # Grafana
-grafana/data/ 
+grafana/data/
+
+# MacOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp 
