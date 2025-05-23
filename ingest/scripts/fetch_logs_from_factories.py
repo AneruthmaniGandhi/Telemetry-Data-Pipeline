@@ -17,7 +17,19 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # MinIO configuration
-MINIO_ENDPOINT = "host.docker.internal:9000"
+# Auto-detect endpoint based on environment
+import socket
+def get_minio_endpoint():
+    """Determine MinIO endpoint based on environment."""
+    try:
+        # Try to resolve 'minio' hostname (works in Docker networks)
+        socket.gethostbyname('minio')
+        return "minio:9000"
+    except socket.gaierror:
+        # Fall back to localhost (works from host system)
+        return "localhost:9000"
+
+MINIO_ENDPOINT = get_minio_endpoint()
 MINIO_ACCESS_KEY = "minioadmin"
 MINIO_SECRET_KEY = "minioadmin"
 BUCKET_NAME = "raw-logs"

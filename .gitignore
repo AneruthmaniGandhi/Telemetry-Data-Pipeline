@@ -78,4 +78,4 @@ grafana/data/
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp minio-data/

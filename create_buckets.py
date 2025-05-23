@@ -4,7 +4,7 @@ import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
 
-# MinIO configuration
+# MinIO configuration  
 MINIO_ENDPOINT = "localhost:9000"
 MINIO_ACCESS_KEY = "minioadmin"
 MINIO_SECRET_KEY = "minioadmin"
